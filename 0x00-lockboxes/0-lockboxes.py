@@ -14,4 +14,3 @@ def canUnlockAll(boxes):
         if validator == 0:
             return False
     return True
-
