@@ -5,7 +5,7 @@
 def minOperations(n):
     if n <= 1 or n is None:
         return 0
-    r = n;
+    r = n
     i = 2
     total = 0
     while r != 1:
