@@ -8,10 +8,12 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *mov1 = list, *mov2 = list->next;
+	listint_t *mov1 = list, *mov2;
 
 	if (list == NULL)
 		return (0);
+
+	mov2 = list->next;
 
 	while (mov2 != NULL && mov2->next != NULL && mov1 != NULL)
 	{
