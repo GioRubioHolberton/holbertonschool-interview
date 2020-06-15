@@ -2,14 +2,14 @@
 #include "lists.h"
 
 /**
- * add_node - inserts a number into a sorted singly linked list.
+ * insert_node - inserts a number into a sorted singly linked list.
  * @head: pointer to pointer
  * @num: integer
  * Return: new node
  *
  */
 
-listint_t *add_node(listint_t **head, int num)
+listint_t *insert_node(listint_t **head, int num)
 {
 	listint_t *new, *crt;
 
