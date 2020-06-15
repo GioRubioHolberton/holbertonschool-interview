@@ -23,7 +23,8 @@ listint_t *insert_node(listint_t **head, int num)
 
 	if (*head == NULL)
 		*head = new;
-
+	else 
+	{
 	for (crt = *head; crt != NULL; crt = crt->next)
 	{
 		if (crt == *head)
@@ -46,6 +47,7 @@ listint_t *insert_node(listint_t **head, int num)
 			crt->next = new;
 			return (*head);
 		}
+	}
 	}
 	return (NULL);
 }
