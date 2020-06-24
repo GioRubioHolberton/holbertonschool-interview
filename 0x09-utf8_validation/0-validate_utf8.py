@@ -12,11 +12,11 @@ def validUTF8(data):
         if num == 0:
             if env.startswith('110'):
                 num = 1
-            elif env.startswith('1110'):
+            if env.startswith('1110'):
                 num = 2
-            elif env.startswith('11110'):
+            if env.startswith('11110'):
                 num = 3
-            elif env.startswith('10'):
+            if env.startswith('10'):
                 return False
         else:
             if not env.startswith('10'):
