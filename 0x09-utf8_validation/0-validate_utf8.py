@@ -8,7 +8,7 @@ def validUTF8(data):
     num = 0
 
     for bit in data:
-        env = bin(bit).replace('0b', '').rjust(8, '0')[-8:]
+        env = format(bit, '#010b')[-8:]
         if num == 0:
             if env.startswith('110'):
                 num = 1
