@@ -22,4 +22,6 @@ def validUTF8(data):
             if not env.startswith('10'):
                 return False
             num -= 1
+    if num != 0:
+        return False
     return True
