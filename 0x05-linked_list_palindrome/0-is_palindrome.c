@@ -24,7 +24,7 @@ int is_palindrome(listint_t **head)
 		move = move->next;
 	}
 
-	while (one < two)
+	while (two < one)
 	{
 		if (array[two] != array[one - 1 - two])
 			return (0);
