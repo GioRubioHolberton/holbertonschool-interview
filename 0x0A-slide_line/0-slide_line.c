@@ -52,7 +52,7 @@ int slide_line(int *line, size_t size, int direction)
 				direction = sw++;
 			mov++;
 		}
-		if (line[in] == 0)
+		if (line[in] != 0)
 			break;
 		if (change == 0 && direction == SLIDE_LEFT)
 		{
