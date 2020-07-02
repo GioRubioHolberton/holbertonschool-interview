@@ -13,7 +13,7 @@ int slide_line(int *line, size_t size, int direction)
 	size_t in = 0, sw = 1, mov = 0;
 	int aux, change, count = 0;
 
-	if (direction != SLIDE_LEFT)
+	if (direction != SLIDE_LEFT && direction != SLIDE_RIGHT)
 		return (0);
 
 	if (direction == SLIDE_RIGHT)
