@@ -2,16 +2,19 @@
 
 /**
  * slide_line - 2048 game
- * @line: elements to be ordered
- * @size: size of the input
- * @direction: left or right alination
- * Return: 1 or 0
+ * @line: items
+ * @size: size
+ * @direction: left, right
+ * Return: 1, 0
  */
 
 int slide_line(int *line, size_t size, int direction)
 {
 	size_t in = 0, sw = 1, mov = 0;
 	int aux, change, count = 0;
+
+	if (direction != SLIDE_LEFT)
+		return (0);
 
 	if (direction == SLIDE_RIGHT)
 	{
