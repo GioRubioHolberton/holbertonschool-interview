@@ -10,8 +10,7 @@
 
 int slide_line(int *line, size_t size, int direction)
 {
-	size_t in = 0, sw = 1, mov = 0;
-	int aux, change, count = 0;
+	size_t in = 0, sw = 1, mov = 0, aux, change, count = 0;
 
 	if (direction != SLIDE_LEFT && direction != SLIDE_RIGHT)
 		return (0);
@@ -21,7 +20,7 @@ int slide_line(int *line, size_t size, int direction)
 		sw = size - 2;
 		in = size - 1; 
 	}
-	while (mov < size)
+	while (count < size)
 	{
 		aux = sw;
 		change = 0;
@@ -45,14 +44,11 @@ int slide_line(int *line, size_t size, int direction)
 			}
 			if (line[sw] != 0)
 				break;
-
-			if (SLIDE_RIGHT)
-				direction = sw--;
-			else
-				direction = sw++;
+			
+			direction == SLIDE_RIGHT ? sw-- : sw++;
 			mov++;
 		}
-		if (line[in] != 0)
+		if (line[in] == 0)
 			break;
 		if (change == 0 && direction == SLIDE_LEFT)
 		{
